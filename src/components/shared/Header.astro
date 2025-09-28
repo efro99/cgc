@@ -1,0 +1,49 @@
+---
+
+const links = [
+    {href: "/" , text: "Inicio"},
+    {href: "/#" , text: "Nosotors"},
+    {href: "/#" , text: "Nuestro Equipo"},
+    {href: "/#" , text: "Servicios"},
+     {href: "/#" , text: "Servicios"},
+      {href: "/#" , text: "Servicios"},
+       {href: "/#" , text: "Servicios"},
+]
+
+const currentPath = Astro.url.pathname;
+
+---
+
+<header
+    class="sticky items-center top-0 z-50 w-ull border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 "
+>
+    <div class="container flex h-16 items-center">
+        <div class="mr-6 flex items-center spcace-x-2">
+            <span class="font-bold font-headline text-lg text-primary">Circulo Ginecologico</span>
+        </div>
+        <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
+            
+            
+            {
+                links.map(({ href, text }) => (
+                    <div>
+                        <a href={href} class="text-dark-800 text-center dark:text-dark-200 mx-1.5 sm:mx-6">{text}</a>
+                        {
+                            currentPath=== href ? (
+                                <div transition:name="menu-line" class="border-b-2 border-blue-500 mx-4"></div>
+                            ) : (
+                                <div class="border-b-2 border-transparent"></div>
+                            )
+                        }
+                    </div>
+
+                ))
+            }
+        </div>
+
+            
+        <div class="flex flex-1 items-center justify-end">
+            
+        </div>
+    </div>
+</header>

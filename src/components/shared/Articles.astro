@@ -1,0 +1,67 @@
+---
+import ArticleCard from "../cards/ArticleCard.astro";
+
+
+const articles = [
+    {
+        source: "Inter ref",
+        title: "Test title 1",
+        description: "Test Card",
+        imgSource: "#",
+    },
+    {
+       source: "Inter ref",
+        title: "Test title 2",
+        description: "Test Card",
+        imgSource: "#",
+    },
+    {
+        source: "National ref",
+        title: "Test title 13",
+        description: "Test Card",
+        imgSource: "#",
+    },{
+        source: "Inter ref",
+        title: "Test title 1",
+        description: "Test Card",
+        imgSource: "#",
+    },
+    {
+       source: "Inter ref",
+        title: "Test title 2",
+        description: "Test Card",
+        imgSource: "#",
+    },
+    {
+        source: "National ref",
+        title: "Test title 13",
+        description: "Test Card",
+        imgSource: "#",
+    }
+];
+---
+
+ <section class="py-16 sm:py-24 bg-secondary">
+        <div class="container">
+          <!-- <div class="text-center mb-12">
+            <h2 class="text-3xl font-headline font-bold tracking-tight text-primary sm:text-4xl">
+              Nuestros Servicios / Articulos
+            </h2>
+            <p class="mt-4 text-lg leading-8 text-muted-foreground">
+              [Si se necesita uan pequeña descripción]
+            </p>
+          </div> -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {
+              articles.map((article) => (
+                <ArticleCard class="rounded-lg border bg-card text-card-foreground shadow-sm"
+                  title={article.title} 
+                  source={article.source} 
+                  description={article.description}
+                />
+              ))
+            }
+          </div>
+        </div>
+      </section>
+

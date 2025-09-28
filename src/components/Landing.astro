@@ -1,0 +1,83 @@
+---
+import { Image } from 'astro:assets';
+import landingImage from '../assets/images/landingImage.jpg'
+import Articles from './shared/Articles.astro';
+import Team from './shared/Team.astro';
+---
+ <div>
+      {/* Hero Section */}
+      <section class="relative h-[60vh] md:h-[70vh] flex items-center justify-center text-center text-dark">
+        
+        <div class="absolute inset-0 bg-primary/70" />
+        <!-- <img src="/public/assets/images/landingImage.webp" class="object-cover" /> -->
+        <div class="relative z-10 px-4">
+          <h1 class="text-4xl md:text-6xl font-headline font-bold tracking-tight">
+            CGC:Centro Ginecólogo Country
+          </h1>
+          <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-primary-foreground/90">
+            Centro ginecólogo
+          </p>
+          <!-- <Button asChild size="lg" class="mt-8 bg-accent text-accent-foreground hover:bg-accent/90">
+            <Link href="/#contact">Book an Appointment</Link> -->
+          <!-- </Button> -->
+        </div>
+       
+      </section>
+
+     
+      <Articles />
+      <Team />
+      
+
+      {/* Contact & Location Section */}
+      <section id="contact" class="py-16 sm:py-24 bg-secondary scroll-mt-16">
+        <div class="container">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-headline font-bold tracking-tight text-primary sm:text-4xl">
+              Contactanos
+            </h2>
+            <p class="mt-4 text-lg leading-8 text-muted-foreground">
+              We're here to help. Reach out to us for appointments or inquiries.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <!-- <Card class="p-6 md:p-8">
+              <ContactForm />
+            </Card> -->
+            <div class="space-y-8">
+              <!-- <Card>
+                <CardContent class="p-6">
+                  <h3 class="text-2xl font-headline font-semibold text-primary mb-4">
+                    Clinic Information
+                  </h3>
+                  <div class="space-y-4 text-muted-foreground">
+                    <div class="flex items-start gap-4">
+                      <MapPin class="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                      <span>123 Health St, Wellness City, 45678</span>
+                    </div>
+                    <div class="flex items-start gap-4">
+                      <Phone class="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                      <a href="tel:+1234567890" class="hover:text-primary">(123) 456-7890</a>
+                    </div>
+                     <div class="flex items-start gap-4">
+                      <Mail class="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                       <a href="mailto:contact@astromed.com" class="hover:text-primary">contact@astromed.com</a>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card class="overflow-hidden">
+                <Image
+                  src={mapImage.imageUrl}
+                  alt={mapImage.description}
+                  width={800}
+                  height={600}
+                  class="w-full h-auto object-cover"
+                  data-ai-hint={mapImage.imageHint}
+                />
+              </Card> -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>

@@ -1,0 +1,50 @@
+---
+import StaffCard from "../cards/StaffCard.astro";
+
+
+
+const staff = [
+    {
+        name: "Dr 1",
+        staffType: "Test title 1",
+    },
+    {
+        name: "Inter ref",
+        staffType: "Test title 1",
+    },
+    {
+        name: "Inter ref",
+        staffType: "Test title 1",
+    },{
+        name: "Inter ref",
+        staffType: "Test title 1",
+    },
+    {
+        name: "Inter ref",
+        staffType: "Test title 1",
+    }
+];
+---
+
+ <section class="py-16 sm:py-24">
+        <div class="container">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-headline font-bold tracking-tight text-primary sm:text-4xl">
+              Equipo 
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- <CardsTeam class="text-center hover:shadow-xl transition-shadow duration-300" /> -->
+            {
+                staff.map((member) => (
+                    <StaffCard title={member.name} description={member.name}/>
+                ))
+            }
+          </div>
+          <div class="text-center mt-12">
+            <!-- <Button asChild variant="outline">
+              <Link href="/team">Meet The Full Team</Link>
+            </Button>
+          </div> -->
+        </div>
+      </section>
