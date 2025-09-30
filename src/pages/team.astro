@@ -1,0 +1,56 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import StaffCard from "../components/cards/StaffCard.astro";
+
+const staff = [
+    {
+        name: "Dr 1",
+        title: "Especialidad",
+        staffDescription: "Ejemplo"
+    },
+    {
+        name: "Dr 2",
+        title: "Especialidad",
+        staffDescription: "Ejemplo"
+    },
+    {
+        name: "Dr 1",
+        title: "Especialidad",
+        staffDescription: "Ejemplo"
+    },{
+       name: "Dr 1",
+        title: "Especialidad",
+        staffDescription: "Ejemplo"
+    },
+    {
+       name: "Dr 1",
+        title: "Especialidad",
+        staffDescription: "Ejemplo"
+    },
+    {
+       name: "Dr 1",
+        title: "Especialidad",
+        staffDescription: "Ejemplo"
+    }
+];
+
+---
+<MainLayout>
+        <div class="container ">
+          <div class="text-center mb-12 pt-30">
+            <h2 class="text-3xl font-headline font-bold tracking-tight text-primary sm:text-4xl">
+              Nuestro Equipo 
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {
+                staff.map((member) => (
+                    <StaffCard name={member.name} title={member.title} description={member.staffDescription} />
+                ))
+            }
+          </div>
+        </div>
+
+</MainLayout>
+
+

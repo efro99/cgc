@@ -1,7 +1,7 @@
 ---
 import { ClientRouter } from "astro:transitions"
 import '../styles/global.css'
-import Header from "../components/Header.astro"
+import Header from "../components/shared/Header.astro"
 
 ---
 
@@ -16,7 +16,7 @@ import Header from "../components/Header.astro"
 </head>
 <body class="font-body antialiased">
     <div class="flex items-center flex-col min-h-screen">
-        
+        <Header />
         <slot class="flex-grow"/>
     </div>
 </body>

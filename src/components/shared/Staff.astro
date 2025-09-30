@@ -6,22 +6,32 @@ import StaffCard from "../cards/StaffCard.astro";
 const staff = [
     {
         name: "Dr 1",
-        staffType: "Test title 1",
+        title: "Especialidad",
+        staffDescription: "Ejemplo"
     },
     {
-        name: "Inter ref",
-        staffType: "Test title 1",
+        name: "Dr 2",
+        title: "Especialidad",
+        staffDescription: "Ejemplo"
     },
     {
-        name: "Inter ref",
-        staffType: "Test title 1",
+        name: "Dr 1",
+        title: "Especialidad",
+        staffDescription: "Ejemplo"
     },{
-        name: "Inter ref",
-        staffType: "Test title 1",
+       name: "Dr 1",
+        title: "Especialidad",
+        staffDescription: "Ejemplo"
     },
     {
-        name: "Inter ref",
-        staffType: "Test title 1",
+       name: "Dr 1",
+        title: "Especialidad",
+        staffDescription: "Ejemplo"
+    },
+    {
+       name: "Dr 1",
+        title: "Especialidad",
+        staffDescription: "Ejemplo"
     }
 ];
 ---
@@ -37,11 +47,11 @@ const staff = [
             <!-- <CardsTeam class="text-center hover:shadow-xl transition-shadow duration-300" /> -->
             {
                 staff.map((member) => (
-                    <StaffCard title={member.name} description={member.name}/>
+                    <StaffCard name={member.name} title={member.title} description={member.staffDescription} />
                 ))
             }
           </div>
-          <div class="text-center mt-12">
+          <!-- <div class="text-center mt-12"> -->
             <!-- <Button asChild variant="outline">
               <Link href="/team">Meet The Full Team</Link>
             </Button>
